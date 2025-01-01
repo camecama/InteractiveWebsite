@@ -39,15 +39,15 @@ animateParticles();
 const diagramContainer = document.getElementById('diagram-container');
 const schemes = [
     {
-        src: 'images/scheme1.png',
+        src: 'scheme1.png', // Corrected path
         description: 'This scheme illustrates how photons interact with materials during light absorption.',
     },
     {
-        src: 'images/scheme2.png',
+        src: 'scheme2.png', // Corrected path
         description: 'This scheme demonstrates energy conversion in materials when absorbing light.',
     },
     {
-        src: 'images/scheme3.png',
+        src: 'scheme3.png', // Corrected path
         description: 'This scheme shows the dependence of light absorption on wavelength.',
     },
 ];
@@ -55,33 +55,35 @@ const schemes = [
 function loadSchemes() {
     schemes.forEach((scheme) => {
         const img = document.createElement('img');
-        img.src = scheme.src;
+        img.src = scheme.src; // Uses corrected path
         img.alt = scheme.description;
         img.classList.add('scheme-image');
-        img.title = scheme.description;
-        img.onclick = () => alert(scheme.description);
+        img.onclick = () => toggleExpand(img);
         diagramContainer.appendChild(img);
     });
 }
+
+function toggleExpand(img) {
+    const expanded = document.querySelector('.scheme-image.expanded');
+    if (expanded && expanded !== img) {
+        expanded.classList.remove('expanded');
+    }
+    img.classList.toggle('expanded');
+}
+
 loadSchemes();
 
-// Quiz Questions
+// Quiz Logic
 const quizQuestions = [
     {
         question: "Which of the following is a key concept of light absorption?",
         answers: ["Reflection", "Photons", "Refraction", "Transmission"],
         correct: 1,
     },
-    {
-        question: "What determines the energy of a photon?",
-        answers: ["Its speed", "Its wavelength", "Its size", "Its temperature"],
-        correct: 1,
-    },
-    // Add all remaining questions here
+    // Add more questions as needed...
 ];
 let currentQuestion = 0;
 
-// Quiz Logic
 function loadQuestion() {
     const questionEl = document.getElementById("question");
     const answersEl = document.getElementById("answers");
@@ -121,7 +123,7 @@ function loadQuestion() {
 }
 loadQuestion();
 
-// Toggle Content Function for Interactive Sections
+// Toggle Content for Topics
 function toggleContent(sectionId) {
     const section = document.getElementById(sectionId);
     section.classList.toggle("hidden");
