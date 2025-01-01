@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Light Absorption</title>
+    <!-- Include GSAP and Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#introduction">Introduction</a>
+        <a href="#content">Main Content</a>
+        <a href="#schemes">Interactive Schemes</a>
+        <a href="#game">Quiz Game</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <h1>Welcome to Interactive Light Absorption</h1>
+        <p>Explore the science of light absorption with 3D visuals and engaging animations.</p>
+    </header>
+
+    <!-- Three.js Canvas -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Main Content Section -->
+    <section id="content">
+        <h2>Main Content</h2>
+        <!-- Interactive Topics -->
+        <div class="interactive-section">
+            <h3 onclick="toggleContent('topic1')">What is light absorption?</h3>
+            <p id="topic1" class="hidden">
+                Light absorption is a process where photons (light particles) are taken up by a material, causing their energy to transfer to the material's molecules or atoms. This transfer often results in an increase in the material's internal energy, which can manifest as heat, electrical energy, or chemical reactions.
+            </p>
+        </div>
+        <div class="interactive-section">
+            <h3 onclick="toggleContent('topic2')">Why is it important in optics and lasers?</h3>
+            <p id="topic2" class="hidden">
+                Light absorption is fundamental in optics and laser technologies as it determines how materials interact with light. In optics, it allows for controlling light transmission, reflection, and refraction. In lasers, it is critical for exciting electrons to higher energy states, enabling coherent light emission.
+            </p>
+        </div>
+        <div class="interactive-section">
+            <h3 onclick="toggleContent('topic3')">Explain the physics behind light absorption.</h3>
+            <p id="topic3" class="hidden">
+                Light absorption occurs when the energy of incoming photons matches the energy difference between two electronic or vibrational states in a material. This resonance allows electrons or molecules to transition to higher energy states, absorbing the light in the process.
+            </p>
+        </div>
+        <div class="interactive-section">
+            <h3 onclick="toggleContent('topic4')">Key concepts</h3>
+            <ul id="topic4" class="hidden">
+                <li><strong>Photons:</strong> Light particles that carry energy. Their energy depends on their wavelength.</li>
+                <li><strong>Wavelength:</strong> The distance between successive peaks of a wave; shorter wavelengths have higher energy.</li>
+                <li><strong>Materials:</strong> Different materials absorb specific wavelengths based on their atomic or molecular structure.</li>
+            </ul>
+        </div>
+        <div class="interactive-section">
+            <h3 onclick="toggleContent('topic5')">Examples of light absorption in real-world scenarios</h3>
+            <ul id="topic5" class="hidden">
+                <li><strong>Solar Panels:</strong> Absorb sunlight and convert it into electrical energy.</li>
+                <li><strong>Medical Imaging:</strong> Techniques like X-rays use light absorption for imaging tissues.</li>
+                <li><strong>Lasers:</strong> Rely on precise absorption and emission of photons to generate coherent light.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Schemes Section -->
+    <section id="schemes">
+        <h2>Interactive Schemes</h2>
+        <div id="diagram-container"></div>
+        <p>Click on the schemes below to explore their concepts interactively.</p>
+    </section>
+
+    <!-- Quiz Game Section -->
+    <section id="game">
+        <h2>Quiz Game</h2>
+        <div id="quiz-container">
+            <p id="question"></p>
+            <div id="answers"></div>
+            <p id="feedback"></p>
+            <button id="next-btn">Next Question</button>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html> 

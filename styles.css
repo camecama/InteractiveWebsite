@@ -1,0 +1,181 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+html, body {
+    height: auto;
+    overflow-y: scroll;
+}
+
+/* Header styling */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: #333333;
+    text-shadow: 0 0 20px #333333;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: black;
+}
+
+/* Navigation bar styling */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Content Section */
+#content {
+    padding: 20px;
+    color: white;
+}
+
+#content h2 {
+    font-size: 2.5rem;
+    color: #00ffcc;
+}
+
+#content p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Interactive Section Styling */
+.interactive-section h3 {
+    cursor: pointer;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+    transition: color 0.3s;
+}
+
+.interactive-section h3:hover {
+    color: #ffcc00;
+}
+
+.hidden {
+    display: none;
+}
+
+.interactive-section p, .interactive-section ul {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Interactive Schemes Section */
+#schemes {
+    padding: 40px;
+    background-color: black;
+    color: white;
+}
+
+#diagram-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px auto;
+}
+
+.scheme-image {
+    width: 200px;
+    height: auto;
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.scheme-image:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.scheme-image:active {
+    transform: scale(1.2);
+    border-color: #ffcc00;
+}
+
+/* Quiz Game Section */
+#quiz-container {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+}
+
+#quiz-container button {
+    padding: 10px 20px;
+    background: #00ffcc;
+    border: none;
+    color: black;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#quiz-container button:hover {
+    background: #ffcc00;
+    color: black;
+}
+
+#feedback {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
